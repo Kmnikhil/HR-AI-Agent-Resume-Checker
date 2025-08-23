@@ -56,14 +56,3 @@ Tools
 * Regex (re) → Structured text extraction (skills, years of experience, etc.)
 
 * Streamlit → Interactive front-end
-
-## 🔄 Workflow (Flowchart)
-
-```mermaid
-flowchart TD
-    A[Upload Files<br/>(JD + Resume in PDF/DOCX/TXT)] --> B[Text Extraction<br/>(pdfplumber, python-docx, Regex)]
-    B --> C[Agent Processing<br/>1. extract_details_from_jd<br/>2. extract_details_from_resume<br/>3. score_resume]
-    C --> D[Score Calculation<br/>(Common Skills / JD Skills) * 100]
-    D --> E[LLM (Groq LLaMA3-8B)<br/>Generate Candidate Summary]
-    E --> F[Results in Streamlit<br/>(Name, Contact, Skills, Score, Summary)]
-    F --> G[Future Enhancements<br/>(NLP models, CrewAI, Cloud, DB)]
