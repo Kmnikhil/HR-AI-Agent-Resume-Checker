@@ -50,9 +50,6 @@ LLM Platforms
 Tools
 
 * pdfplumber → Extracts text from PDF resumes
-
 * python-docx → Extracts text from DOCX resumes
-
 * Regex (re) → Structured text extraction (skills, years of experience, etc.)
-
 * Streamlit → Interactive front-end
