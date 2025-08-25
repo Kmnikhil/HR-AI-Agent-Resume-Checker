@@ -8,13 +8,14 @@ uploaded resumes and job descriptions, then computes a matching score and genera
 ---
 project structure
 ```
-📁 hr-ai-agent-resume-checker
-│-- 📄 app.py                     # Main Streamlit app (UI for uploading JD & resumes)
-│-- 📄 agents.py                  # Python functions (extract JD, extract resume, score calculation)
-│-- 📄 llm_summary.py             # LLaMA 3 (Groq) integration for candidate summary
-│-- 📄 text_extractors.py         # Utilities using pdfplumber, python-docx, regex
-│-- 📄 requirements.txt           # Dependencies
-│-- 📄 README.md                  # Project documentation
+work flow
+    A[Upload JD & Resumes] --> B[Extract Text]
+    B --> C[Parse Skills & Experience]
+    C --> D[Score Candidates]
+    D --> E[Generate Summary via Groq LLM]
+    E --> F[Display Ranked Table]
+    F --> G[Schedule Interview via Calendar API]
+    G --> H[Send Email via Yagmail]
 ```
 Development Environment
 
@@ -29,18 +30,15 @@ Web Frameworks
 * Upload job description and resume files (.pdf, .docx, .txt)
 * Display results in a table with candidate details, score, skills, and summary
 ---
-  
-AI & ML Frameworks
-* Customized Python functions for skill and experience extraction
-  
-Agentic AI Frameworks
-* Currently, the project simulates agents through Python functions:
-* extract_details_from_jd → Extracts required skills and experience from job description
-* extract_details_from_resume → Extracts candidate details (skills, experience, contact info)
-* score_resume → Calculates compatibility score between JD and resume
 
-**Future Plan: Integrate CrewAI for autonomous, collaborative agents** 
+Add Google Calendar credentials
 
+* Download credentials.json from Google Cloud Console
+* Place it in your project directory
+  
+Run the App
+
+* streamlit run app.py
 
 LLM Platforms
 
@@ -49,7 +47,11 @@ LLM Platforms
 ---
 Tools
 
-* pdfplumber → Extracts text from PDF resumes
-* python-docx → Extracts text from DOCX resumes
-* Regex (re) → Structured text extraction (skills, years of experience, etc.)
-* Streamlit → Interactive front-end
+- pdfplumber
+- python-docx
+- re (Regex)
+- Streamlit
+- google-api-python-client
+- google-auth-oauthlib
+- Yagmail
+- datetime
