@@ -55,3 +55,8 @@ Tools
 - google-auth-oauthlib
 - Yagmail
 - datetime
+
+<img width="1919" height="1048" alt="image" src="https://github.com/user-attachments/assets/2c5f386e-db97-4c93-a3b9-ce6353a44eec" />
+<img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/3b466a9d-e325-42a2-9716-b34386a4ae8a" />
+<img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/11b045de-b580-471b-b29b-f0abd849a07c" />
+
